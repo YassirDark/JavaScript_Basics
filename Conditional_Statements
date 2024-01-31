@@ -1,0 +1,41 @@
+// Change sale into true to see the message.
+let sale = false
+if (sale){
+  console.log('Time to wait for a sale.')
+} //Or we can add else condition  when sale is True 
+else {
+  console.log('Time to buy!')
+}
+// Comparison Operators very important !! :  > , < >= , <= or ===
+let hungerLevel = 10
+if (hungerLevel >= 10) { console.log('Time to eat!')} else { console.log('We can eat later!')}
+
+//Logical Operators " && : and , || : or "
+
+let mood = 'sleepy';
+let tirednessLevel = 6;
+if (mood === 'sleepy' || tirednessLevel > 8){ console.log('time to sleep')}else { console.log('not bed time yet')}
+
+// false , 0 , NaN , undefined , null , "" ,''
+let wordCount = 10;
+
+if (wordCount) {
+  console.log("Great! You've started your work!");
+} else {
+  console.log('Better get to work!');
+}
+let favoritePhrase = '';
+
+if (favoritePhrase) {
+  console.log("This string doesn't seem to be empty.");
+} else {
+  console.log('This string is definitely empty.');
+}
+
+//Truthy and Falsy Assignment
+let tool = 'marker';
+
+// Use short circuit evaluation to assign  writingUtensil variable below.
+let writingUtensil = tool || 'pen' //if tool= '' this variable will take pen by default.
+
+console.log(`The ${writingUtensil} is mightier than the sword.`);
