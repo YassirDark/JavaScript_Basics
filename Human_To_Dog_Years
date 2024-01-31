@@ -1,0 +1,15 @@
+let myAge = 22; // Human Age
+
+let earlyYears = 2; 
+earlyYears *= 10.5; // Convert early years to dog years
+
+let laterYears = (myAge - 2) * 4; // Convert later years to dog years
+
+console.log(`-- Later Years is: ${laterYears} years old, Early Years is: ${earlyYears} years old.`);
+
+let myAgeInDogYears = laterYears + earlyYears; // Total Dog Age
+
+// Using the toLowerCase() method on a string to convert all characters to lowercase.
+let myName = 'YASSIR'.toLowerCase(); // Convert name to lowercase
+
+console.log(`-- My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`);
