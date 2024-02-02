@@ -1,0 +1,32 @@
+console.log('Game :');
+
+const getUserChoice = userInput => {
+  userInput = userInput.toLowerCase(); // this is why !! 
+  return (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') 
+    ? userInput
+    : (console.log('error! Enter: \'rock\', \'paper\', or \'scissors\''), null);
+};
+
+const getComputerChoice = () => {
+  // Your logic to get computer's choice (rock, paper, or scissors)
+  const choices = ['rock', 'paper', 'scissors'];
+  const randomIndex = Math.floor(Math.random() * 3);
+  return choices[randomIndex];
+};
+
+const playGame = () => {
+  const userChoice = getUserChoice('PapEr'); // You can pass 'rock', 'paper', or 'scissors' use this code  to see what happens to PapEr 
+  const computerChoice = getComputerChoice();
+
+  if (userChoice) {
+    console.log(`User choice: ${userChoice}`);
+    console.log(`Computer choice: ${computerChoice}`);
+  } else {
+    console.log('Game aborted due to invalid user input.');
+  }
+};
+
+//You can add the winn part if you want ...
+
+//Game On
+playGame();
