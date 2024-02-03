@@ -1,0 +1,49 @@
+// "Please endeavor to comprehend the variable declarations; that is why I wrote this code."
+
+console.log('\tEvents and Times :')
+
+// The scope of `random` is too loose 
+const getRandEvent = () => {
+  const random = Math.floor(Math.random() * 3);
+
+  if (random === 0) {
+    return 'Marathon';
+  } else if (random === 1) {
+    return 'Triathlon';
+  } else if (random === 2) {
+    return 'Pentathlon';
+  }
+};
+
+const getTrainingDays = event => {
+  let days = 0;
+  if (event === 'Marathon') {
+    return days = 50;
+  } else if (event === 'Triathlon') {
+    return days = 100;
+  } else if (event === 'Pentathlon') {
+    return days = 200;
+  }
+};
+
+const logTrainingInfo = (name, event, days) => {
+  console.log(`\n${name}'s event is: ${event}`);
+  console.log(`${name}'s time to train is: ${days} days\n`);
+};
+
+// Competitor 1: Nala
+const name1 = 'Nala';
+const eventNala = getRandEvent();
+const daysNala = getTrainingDays(eventNala);
+
+// Log both event and time using a single function
+logTrainingInfo(name1 , eventNala, daysNala);
+
+// Competitor 2: Warren
+const name2 = 'Warren';
+const eventWarren = getRandEvent();
+const daysWarren = getTrainingDays(eventWarren);
+
+// Log both event and time for the additional competitor
+logTrainingInfo(name2, eventWarren, daysWarren);
+
