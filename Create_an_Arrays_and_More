@@ -1,0 +1,50 @@
+// One way we can create an array is to use an array literal.
+
+const hobbies = ['Sport','Music','Programmation'];
+console.log(hobbies);
+
+//Accessing Elements.
+
+const famousSayings = ['Fortune favors the brave.', 'A joke is a very serious thing.', 'Where there is love there is life.'];let listItem = famousSayings[0];
+console.log(listItem); // Individual elements in arrays can also be stored to variables.
+console.log(famousSayings[2]);  //  this is the third element in the famousSayings array
+console.log(famousSayings[3]); // But what happens if you try to access an index that is beyond the last element?  -- output : undefined
+
+// Update Elements. 
+
+let seasons = ['Winter', 'Spring', 'Summer', 'Fall'];
+seasons[3] = 'Autumn'; // update : Fall into Autumn
+console.log(seasons); //Output: ['Winter', 'Spring', 'Summer', 'Autumn']
+
+//Arrays with let and const.
+
+let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];
+const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+//update let variable whit index 0
+condiments[0] = 'Mayo'
+console.log(condiments)
+// reassign condiments to be a new array that contains a single string ['Mayo'].
+condiments = ['Mayo']
+console.log(condiments)
+// Notice that you can update and add elements ins const variables arrays.
+utensils[3]='Spoon';
+console.log(utensils)
+utensils[4]='Dish';
+console.log(utensils)
+
+//The .length property.
+
+const objectives = ['Learn a new language', 'Read 52 books', 'Run a marathon'];
+console.log (objectives.length)
+const chores = ['wash dishes', 'do laundry', 'take out trash'];
+chores.push('eat your meal','go to sleep') // The push methode.
+console.log(chores)
+
+// The pop methode. 
+const newItemTracker = ['item 0', 'item 1', 'item 2'];
+
+const removed = newItemTracker.pop();
+console.log(newItemTracker); 
+// Output: [ 'item 0', 'item 1' ]
+console.log(removed);
+// Output: item 2
