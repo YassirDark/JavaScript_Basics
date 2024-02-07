@@ -48,3 +48,13 @@ console.log(newItemTracker);
 // Output: [ 'item 0', 'item 1' ]
 console.log(removed);
 // Output: item 2
+
+const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
+
+groceryList.shift(0); //Removes and returns the first element of the array. All subsequent elements will shift down one place.
+groceryList.unshift('popcorn'); //Adds one or more elements to beginning of array and returns new length.
+console.log(groceryList.slice(1, 4));
+console.log(groceryList);
+
+const pastaIndex = groceryList.indexOf('pasta');
+console.log(`The pasta index in the array is : ${pastaIndex}`); 
