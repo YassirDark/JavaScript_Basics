@@ -1,0 +1,31 @@
+// Functions as Data.
+const checkThatTwoPlusTwoEqualsFourAMillionTimes = () => {
+  for(let i = 1; i <= 1000000; i++) {
+    if ( (2 + 2) != 4) {
+      console.log('Something has gone very wrong :( ');
+    }
+  }
+};
+const isTwoPlusTwo = checkThatTwoPlusTwoEqualsFourAMillionTimes; // JavaScript is awesome 
+isTwoPlusTwo();
+
+console.log(isTwoPlusTwo.name);
+
+//Functions as Parameters.
+const addTwo = num => {
+  return num + 2;
+}
+const checkConsistentOutput = (func, val) => {
+  let checkA = val + 2;  // Step 1: calculate checkA by adding 2 to val (in this case, 2 + 2 = 4)
+  let checkB = func(val); // Step 2: call the provided function (addTwo in this case) with the given value (2) and store the result in checkB
+
+  if (checkA === checkB) { // Step 3: compare checkA and checkB
+    return checkB; // Step 4: if they are equal, return checkB (which is 4 in this case)
+  } else {
+    return 'inconsistent results';// Step 5: if they are not equal, return 'inconsistent results'
+  }
+}
+console.log(checkConsistentOutput(addTwo, 2));
+// Step 6: Call checkConsistentOutput with addTwo function and value 2
+// The result of addTwo(2) is 4, and checkA is also 4
+// Since checkA equals checkB, it logs the result (4) to the console
